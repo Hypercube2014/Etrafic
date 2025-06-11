@@ -5,14 +5,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = trim($_POST['message'] ?? '');
 
     if ($name && $email && $message) {
-        $to = 'ayanleh.abdisalam@hypercube.dj';
-        $subject = 'Nouveau message de contact';
-        $body = "Nom: $name\nEmail: $email\n\n$message";
-        $headers = "From: $email\r\nReply-To: $email";
-        if (mail($to, $subject, $body, $headers)) {
-            $response = 'Votre message a été envoyé.';
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $response = 'Adresse e-mail invalide.';
         } else {
-            $response = "Une erreur s'est produite lors de l'envoi.";
+            $to = 'ayanleh.abdisalam@hypercube.dj';
+            $subject = 'Nouveau message de contact';
+            $body = "Nom: $name\nEmail: $email\n\n$message";
+            $headers = "From: $email\r\n" .
+                       "Reply-To: $email\r\n" .
+                       "Content-Type: text/plain; charset=utf-8";
+            if (mail($to, $subject, $body, $headers)) {
+                $response = 'Votre message a été envoyé.';
+            } else {
+                $response = "Une erreur s'est produite lors de l'envoi.";
+            }
         }
     } else {
         $response = 'Tous les champs sont requis.';
