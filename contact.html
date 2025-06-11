@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Etrafic - Contact</title>
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootsnav.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <nav class="navbar navbar-default bootsnav navbar-sticky">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">Etrafic<span></span></a>
+            </div>
+            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-page" style="padding:60px 0;">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p>Envoyez-nous un message avec le formulaire ci-dessous.</p>
+            <form action="send_contact.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input id="name" name="name" type="text" class="form-control" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" class="form-control" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact" class="contact">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html">Etrafic</a>
+                            </div>
+                            <p>Plateforme de petites annonces pour la vente et la location de véhicules.</p>
+                            <div class="footer-contact">
+                                <p>contact@etrafic.com</p>
+                                <p>+1 (885) 2563154554</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h2>À propos</h2>
+                            <ul>
+                                <li><a href="#">À propos</a></li>
+                                <li><a href="#">Carrière</a></li>
+                                <li><a href="#">Conditions d'utilisation</a></li>
+                                <li><a href="#">Politique de confidentialité</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="single-footer-widget">
+                            <h2>Marques populaires</h2>
+                            <div class="row">
+                                <div class="col-md-7 col-xs-6">
+                                    <ul>
+                                        <li><a href="#">BMW</a></li>
+                                        <li><a href="#">lamborghini</a></li>
+                                        <li><a href="#">camaro</a></li>
+                                        <li><a href="#">audi</a></li>
+                                        <li><a href="#">infiniti</a></li>
+                                        <li><a href="#">nissan</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5 col-xs-6">
+                                    <ul>
+                                        <li><a href="#">ferrari</a></li>
+                                        <li><a href="#">porsche</a></li>
+                                        <li><a href="#">land rover</a></li>
+                                        <li><a href="#">aston martin</a></li>
+                                        <li><a href="#">mersedes</a></li>
+                                        <li><a href="#">opel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h2>Newsletter</h2>
+                            <div class="footer-newsletter">
+                                <p>Inscrivez-vous pour recevoir nos dernières actualités.</p>
+                            </div>
+                            <div class="hm-foot-email">
+                                <div class="foot-email-box">
+                                    <input type="text" class="form-control" placeholder="Votre email">
+                                </div>
+                                <div class="foot-email-subscribe">
+                                    <span><i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>&copy; 2025 Etrafic. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scroll-Top">
+            <div class="return-to-top">
+                <i class="fa fa-angle-up" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Retour en haut" aria-hidden="true"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
