@@ -1,4 +1,7 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+require __DIR__ . '/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name'] ?? '');
     $email = trim($_POST['email'] ?? '');
@@ -8,13 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $response = 'Adresse e-mail invalide.';
         } else {
-            $to = 'ayanleh.abdisalam@hypercube.dj';
-            $subject = 'Nouveau message de contact';
-            $body = "Nom: $name\nEmail: $email\n\n$message";
-            $headers = "From: $email\r\n" .
-                       "Reply-To: $email\r\n" .
-                       "Content-Type: text/plain; charset=utf-8";
-            if (mail($to, $subject, $body, $headers)) {
+            $mail = new PHPMailer();
+            $mail->setFrom($email, $name);
+            $mail->addAddress('ayanleh.abdisalam@hypercube.dj');
+            $mail->Subject = 'Nouveau message de contact';
+            $mail->Body = "Nom: $name\nEmail: $email\n\n$message";
+            if ($mail->send()) {
                 $response = 'Votre message a été envoyé.';
             } else {
                 $response = "Une erreur s'est produite lors de l'envoi.";
